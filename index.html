@@ -5,9 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="game.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="nav">
+            <h1>Rock Paper Scissors</h1>
+        </div>
+    <div class="main">
+        <div class="buttons">
+            <div class="btn-container">
+                <button id="btn-rock">Rock</button>
+                <button id="btn-paper">Paper</button>
+                <button id="btn-scissors">Scissors</button>
+            </div>
+        </div>
+        <div class="game-info">
+            <div class="game-container">
+                <div class="rule">
+                    First to five rounds, win the match
+                </div>
+                <div class="score">
+                    <div id="player-score"></div>
+                    <div id="computer-score"></div>
+                </div>
+                <div class="round-info"></div>
+                <div class="match-info"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            Copyright © Siddharth Gupta 2022
+        </p>
+    </div>
+    </div>
 </body>
 </html>
