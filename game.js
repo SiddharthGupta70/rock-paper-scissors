@@ -32,31 +32,32 @@ btnScissors.addEventListener ('click', () => {
 function playRound (playerChoice) {
     const playerSelection = playerChoice;
     const computerSelection = computerChoice();
-    displayRound(playerSelection, computerSelection);
-    if (playerSelection==='rock') {
-        if (computerSelection==='rock')
-            return 'tie';
-        else if (computerSelection==='paper')
-            return 'lose';
-        else
-            return 'win';
-    }
-    else if (playerSelection==='paper') {
-        if (computerSelection==='rock')
-            return 'win';
-        else if (computerSelection==='paper')
-            return 'tie';
-        else
-            return 'lose';
+    let result = null;
+    if (playerSelection===computerSelection) {
+        result = 'tie';
     }
     else {
-        if (computerSelection==='rock')
-            return 'lose';
-        else if (computerSelection==='paper')
-            return 'win';
-        else
-            return 'tie';
+        if (playerSelection==='rock') {
+            if (computerSelection==='scissors')
+                result='win';
+            else
+                result='loss';
+        }
+        if (playerSelection==='paper') {
+            if (computerSelection==='rock')
+                result='win';
+            else
+                result='loss';
+        }
+        if (playerSelection==='scissors') {
+            if (computerSelection==='paper')
+                result='win';
+            else
+                result='loss';
+        }
     }
+    displayRound(playerSelection, computerSelection, result);
+    return result;
 }
 
 function computerChoice() {
@@ -72,7 +73,7 @@ function computerChoice() {
 function updateScore (result) {
     if (result === 'win')
         ++playerScore;
-    if (result === 'lose')
+    if (result === 'loss')
         ++computerScore;
     displayScore();    
 } 
@@ -95,9 +96,9 @@ function displayScore() {
     computerCurrentScore.textContent = 'Computer Score - '+computerScore;    
 }
 
-function displayRound (playerSelection, computerSelection) {
+function displayRound (playerSelection, computerSelection, result) {
     const round = document.querySelector('.round-info');
-    round.textContent = 'You chose '+playerSelection+' and computer chose '+computerSelection;
+    round.textContent = 'You chose '+playerSelection+' and computer chose '+computerSelection+', round '+result+'!';
 }
 
 function updateMatch (isWon) {
