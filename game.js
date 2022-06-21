@@ -111,7 +111,7 @@ function updateMatch (isWon) {
     }
     const game = document.querySelector('.game-container');
     const replayBtn = document.createElement('button');
-    replayBtn.style.cssText = 'font-size: 2rem; padding: 5px; border-radius: 10px; border: 1px solid black';
+    replayBtn.style.cssText = 'font-size: 1.8rem; color: white; background-color: dodgerblue; padding: 4px 30px; border-radius: 10px;';
     replayBtn.textContent = 'Play again';
     game.appendChild(replayBtn);
     replayBtn.addEventListener('click', () => {

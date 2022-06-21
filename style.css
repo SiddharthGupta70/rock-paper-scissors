@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    border: none;
+    appearance: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
 }
 
 .container {
@@ -20,8 +29,8 @@
 }
 
 .nav span {
-    font-size: 6.8rem;
-    margin-right: 20px;
+    font-size: 3.2rem;
+    margin-right: 10px;
 }
 
 #h1-rock {
@@ -33,7 +42,7 @@
 }
 
 #h1-scissors {
-    color: dodgerblue;
+    color: coral;
 }
 
 .main {
@@ -51,15 +60,18 @@
 
 .btn-container {
     display: flex;
-    column-gap: 25px;
+    column-gap: 50px;
 }
 
 .buttons button {
-    width: 200px;
-    font-size: 4.6rem;
+    padding: 4px 30px;
+    font-size: 2rem;
     color: white;
-    border-radius: 15px;
-    border: none;
+    border-radius: 10px;
+}
+
+.buttons button:hover {
+    transform: scale(1.15);
 }
 
 #btn-rock {
@@ -71,7 +83,7 @@
 }
 
 #btn-scissors {
-    background-color: dodgerblue;
+    background-color:coral
 }
 
 .game-info {
@@ -82,19 +94,19 @@
 }
 
 .game-container {
-    height: 250px;
-    width: 600px;
+    height: 300px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 20px;
-    border: 3px solid darkgray;
     border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .rule {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 
 .score {
@@ -103,7 +115,7 @@
 }
 
 .score div {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -116,23 +128,37 @@
 }
 
 .round-info {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
 }
 
 .match-info {
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 .footer {
-    height: 40px;
+    height: 60px;
     flex: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.724);
+    column-gap: 10px;
 }
 
 .footer p {
-    font-size: 1.6rem;
-    color: white;
+    font-size: 1.4rem;
+}
+
+.footer > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footer > a > img {
+    height: 60%;
+    width: auto;
+}
+
+.footer > a > img:hover {
+    transform: scale(1.2);
 }
